@@ -25,7 +25,7 @@ function TodoList() {
     <>
       <h1>What's the plane for Today??</h1>
       <TodoForm onSubmit={addTodo} />
-      <Todo />
+      <Todo todos={todos} completeTodo={completeTodo} />
     </>
   );
 }
