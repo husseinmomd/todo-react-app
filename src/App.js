@@ -1,7 +1,6 @@
 import TodoList from "./components/TodoList";
-import Todo from "./components/Todo";
-import TodoForm from "./components/TodoForm";
 
+import "./style.css";
 function App() {
   return (
     <div className="todo-app">
