@@ -15,6 +15,8 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
       id: null,
       value: "",
     });
+    // const btn = document.getElementById("btn");
+    // btn.textContent = "update todo";
   };
 
   if (edit.id) {
@@ -25,12 +27,26 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
       className={todo.isComplete ? "todo-row complete" : "todo-row"}
       key={index}
     >
-      <div key={todo.id} onClick={() => completeTodo}>
+      <div
+        className="container"
+        style={{ fontSize: "20px", margin: "20px 15px " }}
+        key={todo.id}
+        onClick={() => completeTodo}
+      >
         {todo.text}
       </div>
-      <div className="icons">
-        <RiCloseCircleLine onClick={() => removeTodo(todo.id)} />
-        <TiEdit onClick={() => setEdit({ id: todo.id, value: todo.text })} />
+      <div
+        style={{ fontSize: " 25px", marginTop: " 20px", marginRight: "20px" }}
+        className="icons"
+      >
+        <RiCloseCircleLine
+          style={{ cursor: "pointer" }}
+          onClick={() => removeTodo(todo.id)}
+        />
+        <TiEdit
+          style={{ cursor: "pointer" }}
+          onClick={() => setEdit({ id: todo.id, value: todo.text })}
+        />
       </div>
     </div>
   ));

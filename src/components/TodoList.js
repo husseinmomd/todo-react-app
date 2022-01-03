@@ -38,7 +38,9 @@ function TodoList() {
   };
   return (
     <>
-      <h1>What's the plane for Today??</h1>
+      <h1 style={{ textAlign: "center" }} className="title">
+        What's the plane for Today??
+      </h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
